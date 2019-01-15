@@ -43,19 +43,19 @@ public class Empleado implements Serializable {
     }
     
     
-    public static Empleado instanceEmpleadoFromArrayString(String [] _data){
+    public static Empleado instanceEmpleadoFromArrayString(String[] _data){
         Empleado e = new Empleado(_data[0],_data[1],_data[2],_data[3],_data[4],
                 _data[5],Float.parseFloat(_data[6]));
         return e;
     }
 
     public String empleadoToStringConFormato(){
-        String formato = " %-25s %-25s %8s %12s %30s %5.2f %15s ";
-        String e = String.format(formato, this.apellido,this.nombre,
+        String formato = " %-25s %-25s %8s %12s %30s %10.2f %20s ";
+        String eSt = String.format(formato, this.apellido,this.nombre,
                 this.sexo,this.dni,this.correoElectronico,this.altura,this.depto);
-        return e;
+        return eSt;
     }
-    
+    /// ---- hasta aqui lo que hice en el examen
     public String getNombre() {
         return nombre;
     }
@@ -87,4 +87,29 @@ public class Empleado implements Serializable {
     public void setSexo(String sexo) {
         this.sexo = sexo;
     }
+
+    public String getDepto() {
+        return depto;
+    }
+
+    public void setDepto(String depto) {
+        this.depto = depto;
+    }
+
+    public String getCorreoElectronico() {
+        return correoElectronico;
+    }
+
+    public void setCorreoElectronico(String correoElectronico) {
+        this.correoElectronico = correoElectronico;
+    }
+
+    public float getAltura() {
+        return altura;
+    }
+
+    public void setAltura(float altura) {
+        this.altura = altura;
+    }
+    
 }

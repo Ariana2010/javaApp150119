@@ -38,7 +38,8 @@ public class Director implements Serializable{
         d.setEmpleadosDepto(new ArrayList<>());*/
         return d;
     }
-    
+    /// ---- hasta aqui lo que hice en el examen
+   
     public String getNombreDepto() {
         return nombreDepto;
     }
